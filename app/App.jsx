@@ -5,7 +5,9 @@ import * as tf from '@tensorflow/tfjs'
 import { file2img, img2Tensor } from './utils'
 import intro from './intro'
 
-const DATA_URL = 'http://localhost:9999'
+const DATA_URL = process.env.NODE_ENV === 'development' ?
+  'http://localhost:9999' :
+  '/models'
 
 class App extends PureComponent {
   constructor(props) {

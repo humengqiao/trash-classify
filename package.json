@@ -8,6 +8,7 @@
     "dev": "parcel app/index.html",
     "build": "parcel build app/index.html --out-dir docs --no-source-maps --public-url ./",
     "prebuild": "npm run clean:docs",
+    "postbuild": "sync-glob output/* docs/models/",
     "clean:docs": "rimraf docs"
   },
   "dependencies": {
@@ -19,7 +20,10 @@
   },
   "devDependencies": {
     "http-server": "^0.12.3",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "sync-glob": "^1.4.0"
   },
-  "browserslist": ["last 1 Chrome version"]
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }
