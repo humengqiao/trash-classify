@@ -7,7 +7,7 @@ import intro from './intro'
 
 const DATA_URL = process.env.NODE_ENV === 'development' ?
   'http://localhost:9999' :
-  '/models'
+  './models'
 
 class App extends PureComponent {
   constructor(props) {
