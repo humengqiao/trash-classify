@@ -1,0 +1,22 @@
+{
+  "name": "trash-classify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "train": "node train/index.js",
+    "dev": "parcel app/index.html"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^2.7.0",
+    "@tensorflow/tfjs-node": "^2.7.0",
+    "antd": "^4.9.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "parcel-bundler": "^1.12.4"
+  },
+  "browserslist": ["last 1 Chrome version"]
+}
