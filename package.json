@@ -5,7 +5,10 @@
   "license": "MIT",
   "scripts": {
     "train": "node train/index.js",
-    "dev": "parcel app/index.html"
+    "dev": "parcel app/index.html",
+    "build": "parcel build app/index.html --out-dir docs --no-source-maps --public-url ./",
+    "prebuild": "npm run clean:docs",
+    "clean:docs": "rimraf docs"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^2.7.0",
